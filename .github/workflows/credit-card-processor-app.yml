@@ -1,4 +1,4 @@
-name: Build and deploy .NET application to container app credit-card-processor-app
+name: credit-card-processor-app
 on:
   push:
     branches:
