@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace point_of_sale.Controllers
+namespace sales_collector.Controllers
 {
     [ApiController]
     [Route("api/ping")]

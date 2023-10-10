@@ -1,4 +1,4 @@
-name: Build and deploy .NET application to container app sales-collector-app
+name: sales-collector-app
 on:
   push:
     branches:
@@ -10,6 +10,7 @@ env:
   CONTAINER_REGISTRY_LOGIN_SERVER: salescollector20231010122624.azurecr.io
   DOTNET_CORE_VERSION: 7.0.x
   PROJECT_NAME_FOR_DOCKER: sales-collector
+  VAULT_URI: https://csca5028vault.vault.azure.net/
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -51,7 +52,7 @@ jobs:
 
           az containerapp registry set --name ${{ env.CONTAINER_APP_NAME }} --resource-group ${{ env.CONTAINER_APP_RESOURCE_GROUP_NAME }} --server ${{ env.CONTAINER_REGISTRY_LOGIN_SERVER }} --username ${{ secrets.salescollector20231010122624_USERNAME_774A }} --password ${{ secrets.salescollector20231010122624_PASSWORD_774A }}
 
-          az containerapp update --name ${{ env.CONTAINER_APP_NAME }} --container-name ${{ env.CONTAINER_APP_CONTAINER_NAME }} --resource-group ${{ env.CONTAINER_APP_RESOURCE_GROUP_NAME }} --image ${{ env.CONTAINER_REGISTRY_LOGIN_SERVER }}/${{ env.PROJECT_NAME_FOR_DOCKER }}:${{ github.sha }}
+          az containerapp update --name ${{ env.CONTAINER_APP_NAME }} --container-name ${{ env.CONTAINER_APP_CONTAINER_NAME }} --resource-group ${{ env.CONTAINER_APP_RESOURCE_GROUP_NAME }} --image ${{ env.CONTAINER_REGISTRY_LOGIN_SERVER }}/${{ env.PROJECT_NAME_FOR_DOCKER }}:${{ github.sha }} --environment-variables 'VaultUri'=${{ env.VAULT_URI }}
     - name: logout
       run: >
         az logout
