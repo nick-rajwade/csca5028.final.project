@@ -2,7 +2,7 @@ name: Build and deploy .NET application to container app sales-collector-app
 on:
   push:
     branches:
-    - main
+    - master
 env:
   CONTAINER_APP_CONTAINER_NAME: sales-collector
   CONTAINER_APP_NAME: sales-collector-app
