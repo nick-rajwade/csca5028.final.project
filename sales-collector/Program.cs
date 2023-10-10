@@ -1,4 +1,6 @@
 using Azure.Identity;
+using Prometheus;
+
 var builder = WebApplication.CreateBuilder(args);
 
 var keyVaultEndpoint = new Uri(Environment.GetEnvironmentVariable("VaultUri"));
@@ -23,6 +25,7 @@ var app = builder.Build();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+app.UseMetricServer("/metrics");
 
 app.MapControllers();
 

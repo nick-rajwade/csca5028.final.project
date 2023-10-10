@@ -39,7 +39,7 @@ namespace point_of_sale
                     foreach (POSTerminal terminal in terminals)
                     {
                         _taskQueue.EnqueueTask(terminal, azureServiceBusConnectionString); //1st Task to be queued and timer to be started
-                        Timer checkoutIntervalTimer = new Timer(OnCheckOutIntervalExpired, terminal, 0, terminal.checkoutTime * 1000);
+                        Timer checkoutIntervalTimer = new Timer(OnCheckOutIntervalExpired, terminal, 0, terminal.checkoutTime * 60* 1000);
                         checkOutTimers.Add(checkoutIntervalTimer);
                     }
                     posOnline.Set(storeAndTerminals.Count);

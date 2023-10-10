@@ -150,12 +150,12 @@ namespace csca5028.final.project.components
             return items;
         }
 
-        public async Task Checkout(POSTerminal terminal, string serviceBusConnection)
+        public async Task Checkout(POSTerminal terminal, string serviceBusConnection, string ccpServiceUri)
         {
             Sale sale = GenerateSale();
             if (sale.paymentType == Sale.PaymentType.CreditCard)
             {
-                CreditCardProcessor processor = new CreditCardProcessor("http://host.docker.internal:9001", new System.Net.Http.HttpClient());
+                CreditCardProcessor processor = new CreditCardProcessor("https://csca5028api.azure-api.net/ccp/", new System.Net.Http.HttpClient());
                 CreditCardResponse response = ProcessCardTransaction(sale, processor);
                 Console.WriteLine("Sale processed by credit card processor: Result: {0}, Code: {1}", response.ResponseType.ToString(), response.AuthCode);
                 //attach card response to sale
