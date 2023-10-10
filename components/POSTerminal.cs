@@ -150,7 +150,7 @@ namespace csca5028.final.project.components
             return items;
         }
 
-        public async Task Checkout(POSTerminal terminal, string serviceBusConnection, string ccpServiceUri)
+        public async Task Checkout(POSTerminal terminal, string serviceBusConnection)
         {
             Sale sale = GenerateSale();
             if (sale.paymentType == Sale.PaymentType.CreditCard)
