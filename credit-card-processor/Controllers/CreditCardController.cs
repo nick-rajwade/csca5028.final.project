@@ -10,6 +10,13 @@ namespace credit_card_processor.Controllers
     [ApiController]
     public class CreditCardController : ControllerBase
     {
+        private readonly ILogger<CreditCardController> _logger;
+
+        public CreditCardController(ILogger<CreditCardController> logger)
+        {
+            _logger = logger;
+        }
+        
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
