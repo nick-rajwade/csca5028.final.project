@@ -1,4 +1,4 @@
-name: Build and deploy .NET Core application to Function App salesqsubscriber20231010133423
+name: Function App salesqsubscriber20231010133423
 on:
   push:
     branches:
