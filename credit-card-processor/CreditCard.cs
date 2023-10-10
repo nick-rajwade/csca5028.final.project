@@ -1,8 +1,5 @@
 ﻿namespace credit_card_processor
 {
-
-
-
     public class CreditCard
     {
         //card number
@@ -21,5 +18,15 @@
 
     }
 
+    public enum CreditCardResponseTypes
+    {
+        AUTH,
+        DECLINE,
+    }
 
+    public class CreditCardResponse
+    {
+        public CreditCardResponseTypes ResponseType { get; set; }
+        public string? AuthCode { get; set; }
+    }
 }

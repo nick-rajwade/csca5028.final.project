@@ -16,7 +16,7 @@ namespace credit_card_processor.Controllers
         {
             _logger = logger;
         }
-        
+
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -89,16 +89,5 @@ namespace credit_card_processor.Controllers
             }
         }
     }
-
-    public enum CreditCardResponseTypes
-    {
-        AUTH,
-        DECLINE,
-    }
-
-    public class CreditCardResponse
-    {
-        public CreditCardResponseTypes ResponseType { get; set; }
-        public string? AuthCode { get; set; }
-    }
 }
+

@@ -1,15 +1,10 @@
 using Azure.Identity;
-using point_of_sale;
-using Prometheus;
-
 var builder = WebApplication.CreateBuilder(args);
 
 var keyVaultEndpoint = new Uri(Environment.GetEnvironmentVariable("VaultUri"));
 builder.Configuration.AddAzureKeyVault(keyVaultEndpoint, new DefaultAzureCredential());
 
 // Add services to the container.
-builder.Services.AddHostedService<StoreService>();
-builder.Services.AddSingleton<IPOSTerminalTaskQueue, POSTerminalTaskQueue>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -28,7 +23,7 @@ var app = builder.Build();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-app.UseMetricServer(url: "/metrics");
+
 app.MapControllers();
 
 app.Run();

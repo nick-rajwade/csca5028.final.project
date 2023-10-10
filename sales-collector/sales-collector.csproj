@@ -4,7 +4,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>point_of_sale</RootNamespace>
+    <RootNamespace>sales_collector</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
