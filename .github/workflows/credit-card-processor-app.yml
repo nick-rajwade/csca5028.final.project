@@ -2,7 +2,7 @@ name: Build and deploy .NET application to container app credit-card-processor-a
 on:
   push:
     branches:
-    - main
+    - master
 env:
   CONTAINER_APP_CONTAINER_NAME: credit-card-processor
   CONTAINER_APP_NAME: credit-card-processor-app
