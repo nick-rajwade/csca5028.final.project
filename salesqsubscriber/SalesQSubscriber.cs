@@ -14,7 +14,7 @@ namespace salesqsubscriber
         public SalesQSubscriber(ILoggerFactory loggerFactory, IConfiguration config)
         {
             _logger = loggerFactory.CreateLogger<SalesQSubscriber>();
-            serviceURI = config["scaServiceURI"];
+            //serviceURI = config["scaServiceURI"];
         }
 
         [Function("InsertSale")]
