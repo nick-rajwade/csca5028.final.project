@@ -11,7 +11,7 @@ env:
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 7.0.x
   VAULT_URI: https://csca5028vault.vault.azure.net/
-  WORKING_DIRECTORY: ./csca5028BlazorApp2
+  WORKING_DIRECTORY: .
 jobs:
   build:
     runs-on: ubuntu-latest
