@@ -235,7 +235,7 @@
         Dictionary<string, Tuple<decimal, decimal>> locationData = await cache.GetAsync<Dictionary<string, Tuple<decimal, decimal>>>("StoreLocations");
         var storesAndTerminals = await cache.GetAsync<Dictionary<string, Tuple<Store, List<POSTerminal>>>>("StoresAndTerminals");
 
-        if (perfData == null || perfData.Count == 0 || locationData == null || locationData.Count == 0)
+        if (perfData == null || perfData.Count == 0 || locationData == null || locationData.Count == 0 || storesAndTerminals == null || storesAndTerminals.Count ==0)
         {
             ShowLoadData = true;
             ShowSuccess = false;
@@ -311,7 +311,7 @@
             totalRevenue = new List<TotalRevenueTimeSeriesData>();
         }
         TotalRevenueTimeSeriesData item = new TotalRevenueTimeSeriesData();
-        item.salesPerf = await cache.GetAsync<decimal>("TotalRevenueForTimeInterval");
+        item.salesPerf = await cache.GetAsync<decimal>("TotalSalesRevenue");
         TotalRevenue = item.salesPerf;
         item.xAxis = DateTime.Now;
         totalRevenueString = $@"Total Revenue: {TotalRevenue.ToString("C")}";

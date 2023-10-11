@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 var keyVaultEndpoint = new Uri(Environment.GetEnvironmentVariable("VaultUri"));
 builder.Configuration.AddAzureKeyVault(keyVaultEndpoint, new DefaultAzureCredential());
+Console.WriteLine($"keyvaultEndPoint: {keyVaultEndpoint}");
 
 // Add services to the container.
 builder.Services.AddSyncfusionBlazor();
@@ -16,10 +17,10 @@ builder.Services.AddServerSideBlazor();
 //builder.Services.AddSingleton<RedisCachingService>();
 builder.Services.AddSingleton<MemoryCachingService>();
 builder.Services.AddHostedService<SalesBackgroundService>();
-builder.Services.AddDistributedRedisCache(option =>
-{
-    option.Configuration = builder.Configuration["CacheConnection"];
-});
+//builder.Services.AddDistributedRedisCache(option =>
+//{
+ //   option.Configuration = builder.Configuration["CacheConnection"];
+//});
 
 var app = builder.Build();
 //Register Syncfusion license https://help.syncfusion.com/common/essential-studio/licensing/how-to-generate
