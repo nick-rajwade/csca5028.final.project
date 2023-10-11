@@ -11,6 +11,7 @@ env:
   DOTNET_CORE_VERSION: 7.0.x
   PROJECT_NAME_FOR_DOCKER: point-of-sale
   VAULT_URI: https://csca5028vault.vault.azure.net/
+  TIME_SCALER: 6000 #use to scale the time for the simulation of the app. 60000 will be real time. 6000 will be 10x faster
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -52,7 +53,7 @@ jobs:
 
           az containerapp registry set --name ${{ env.CONTAINER_APP_NAME }} --resource-group ${{ env.CONTAINER_APP_RESOURCE_GROUP_NAME }} --server ${{ env.CONTAINER_REGISTRY_LOGIN_SERVER }} --username ${{ secrets.pointofsale20231009234721_USERNAME_A3B1 }} --password ${{ secrets.pointofsale20231009234721_PASSWORD_A3B1 }} 
 
-          az containerapp update --name ${{ env.CONTAINER_APP_NAME }} --container-name ${{ env.CONTAINER_APP_CONTAINER_NAME }} --resource-group ${{ env.CONTAINER_APP_RESOURCE_GROUP_NAME }} --image ${{ env.CONTAINER_REGISTRY_LOGIN_SERVER }}/${{ env.PROJECT_NAME_FOR_DOCKER }}:${{ github.sha }} --replace-env-vars 'VaultUri'=${{ env.VAULT_URI }}
+          az containerapp update --name ${{ env.CONTAINER_APP_NAME }} --container-name ${{ env.CONTAINER_APP_CONTAINER_NAME }} --resource-group ${{ env.CONTAINER_APP_RESOURCE_GROUP_NAME }} --image ${{ env.CONTAINER_REGISTRY_LOGIN_SERVER }}/${{ env.PROJECT_NAME_FOR_DOCKER }}:${{ github.sha }} --replace-env-vars 'VaultUri'=${{ env.VAULT_URI }} 'TimeScaler'=${{env.TIME_SCALER}}
     - name: logout
       run: >
         az logout

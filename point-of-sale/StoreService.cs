@@ -19,6 +19,8 @@ namespace point_of_sale
 
         Gauge storesOnline = Metrics.CreateGauge("point_of_sale_app_stores_online", "Number of stores running point-of-sale");
         Gauge posOnline = Metrics.CreateGauge("point_of_sale_app_pos_online", "Number of point-of-sale terminals running");
+        
+        private readonly int iTimeScaler = 60000; //default to minutes
 
         public StoreService(ILogger<StoreService> logger, IPOSTerminalTaskQueue taskQueue, IConfiguration config)
         {
@@ -26,6 +28,11 @@ namespace point_of_sale
             _taskQueue = taskQueue;
             azureDbConnectionstring = config["ConnectionStrings:AzureDB"];
             azureServiceBusConnectionString = config["ServiceBusConnectionString"];
+            if(!int.TryParse(Environment.GetEnvironmentVariable("TimeScaler"), out iTimeScaler))
+            {
+                iTimeScaler = 60000;
+            }
+            
 
             try
             {
@@ -39,7 +46,7 @@ namespace point_of_sale
                     foreach (POSTerminal terminal in terminals)
                     {
                         _taskQueue.EnqueueTask(terminal, azureServiceBusConnectionString); //1st Task to be queued and timer to be started
-                        Timer checkoutIntervalTimer = new Timer(OnCheckOutIntervalExpired, terminal, 0, terminal.checkoutTime * 60* 1000);
+                        Timer checkoutIntervalTimer = new Timer(OnCheckOutIntervalExpired, terminal, 0, terminal.checkoutTime * iTimeScaler);
                         checkOutTimers.Add(checkoutIntervalTimer);
                     }
                     posOnline.Set(storeAndTerminals.Count);

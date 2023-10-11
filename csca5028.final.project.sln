@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "credit-card-processor", "credit-card-processor\credit-card-processor.csproj", "{5CDFFA38-5A23-4A1F-B084-A09F2F725317}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "credit-card-processor", "credit-card-processor\credit-card-processor.csproj", "{5CDFFA38-5A23-4A1F-B084-A09F2F725317}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "point-of-sale", "point-of-sale\point-of-sale.csproj", "{F9A6DDE9-3623-47E0-ACAD-BD8BD3503D70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "point-of-sale", "point-of-sale\point-of-sale.csproj", "{F9A6DDE9-3623-47E0-ACAD-BD8BD3503D70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "components", "components\components.csproj", "{DF7AE306-B647-4047-AC99-C37B6ACD3928}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "components", "components\components.csproj", "{DF7AE306-B647-4047-AC99-C37B6ACD3928}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sales-collector", "sales-collector\sales-collector.csproj", "{38866F5D-F615-4061-A86F-F12A0315332C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sales-collector", "sales-collector\sales-collector.csproj", "{38866F5D-F615-4061-A86F-F12A0315332C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "salesqsubscriber", "salesqsubscriber\salesqsubscriber.csproj", "{5ECFC1A1-AEEF-4DD3-9A93-D1ED626F9E06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "salesqsubscriber", "salesqsubscriber\salesqsubscriber.csproj", "{5ECFC1A1-AEEF-4DD3-9A93-D1ED626F9E06}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "csca5028.blazor.webapp", "..\csca5028.final\csca5028.final\csca5028.blazor.webapp\csca5028.blazor.webapp.csproj", "{8580B713-E216-4623-B414-501B04CAEA37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{5ECFC1A1-AEEF-4DD3-9A93-D1ED626F9E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5ECFC1A1-AEEF-4DD3-9A93-D1ED626F9E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5ECFC1A1-AEEF-4DD3-9A93-D1ED626F9E06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8580B713-E216-4623-B414-501B04CAEA37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8580B713-E216-4623-B414-501B04CAEA37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8580B713-E216-4623-B414-501B04CAEA37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8580B713-E216-4623-B414-501B04CAEA37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
