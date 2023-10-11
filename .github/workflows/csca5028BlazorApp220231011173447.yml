@@ -1,16 +1,13 @@
-name: Web App csca5028
+name: Build and deploy .NET Core application to Web App csca5028BlazorApp220231011173447
 on:
   push:
     branches:
     - master
-    paths:
-        - 'csca5028BlazorApp2/**/*'
 env:
-  AZURE_WEBAPP_NAME: csca5028
+  AZURE_WEBAPP_NAME: csca5028BlazorApp220231011173447
   AZURE_WEBAPP_PACKAGE_PATH: ./published
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 7.0.x
-  VAULT_URI: https://csca5028vault.vault.azure.net/
   WORKING_DIRECTORY: .
 jobs:
   build:
@@ -47,9 +44,5 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
-        publish-profile: ${{ secrets.csca5028_961D }}
+        publish-profile: ${{ secrets.csca5028BlazorApp220231011173447_473E }}
         package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
-        app-settings: |
-            {
-                "VaultUri": "${{env.VAULT_URI}}",
-            }

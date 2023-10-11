@@ -5,6 +5,8 @@ using csca5028BlazorApp2.Data;
 using Azure.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
+//ILogger log = builder.Logging.;
+
 Console.WriteLine($"builder.Environment: {builder.Environment}");
 var keyVaultEndpoint = new Uri("https://csca5028vault.vault.azure.net/");
 builder.Configuration.AddAzureKeyVault(keyVaultEndpoint, new DefaultAzureCredential());
