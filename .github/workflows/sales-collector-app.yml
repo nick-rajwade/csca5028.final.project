@@ -18,7 +18,7 @@ jobs:
     - name: Checkout to the branch
       uses: actions/checkout@v3
     - name: Setup .NET SDK
-      uses: actions/setup-dotnet@v1.8.0
+      uses: actions/setup-dotnet@v3
       with:
         include-prerelease: True
         dotnet-version: ${{ env.DOTNET_CORE_VERSION }}

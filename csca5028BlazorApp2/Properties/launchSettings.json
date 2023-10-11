@@ -14,7 +14,9 @@
       "launchBrowser": true,
       "applicationUrl": "http://localhost:5270",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "VaultUri": "https://csca5028vault.vault.azure.net/",
+        "AZURE_USERNAME": "nikhil.rajwade@iorbis.com"
       }
     },
     "https": {
@@ -23,14 +25,18 @@
       "launchBrowser": true,
       "applicationUrl": "https://localhost:7266;http://localhost:5270",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "VaultUri": "https://csca5028vault.vault.azure.net/",
+        "AZURE_USERNAME": "nikhil.rajwade@iorbis.com"
       }
     },
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "VaultUri": "https://csca5028vault.vault.azure.net/",
+        "AZURE_USERNAME": "nikhil.rajwade@iorbis.com"
       }
     }
   }

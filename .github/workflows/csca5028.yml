@@ -3,13 +3,15 @@ on:
   push:
     branches:
     - master
+    paths:
+        - 'csca5028BlazorApp2/**/*'
 env:
   AZURE_WEBAPP_NAME: csca5028
   AZURE_WEBAPP_PACKAGE_PATH: ./published
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 7.0.x
   VAULT_URI: https://csca5028vault.vault.azure.net/
-  WORKING_DIRECTORY: .
+  WORKING_DIRECTORY: ./csca5028BlazorApp2
 jobs:
   build:
     runs-on: ubuntu-latest

@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sales-collector", "sales-co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "salesqsubscriber", "salesqsubscriber\salesqsubscriber.csproj", "{5ECFC1A1-AEEF-4DD3-9A93-D1ED626F9E06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csca5028.blazor.webapp", "csca5028.blazor.webapp\csca5028.blazor.webapp.csproj", "{710C9932-C047-495B-BB03-75C964EC02FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "csca5028BlazorApp2", "csca5028BlazorApp2\csca5028BlazorApp2.csproj", "{95D6BE11-CD71-4BFC-99B4-F6C4504E075C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,10 @@ Global
 		{5ECFC1A1-AEEF-4DD3-9A93-D1ED626F9E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5ECFC1A1-AEEF-4DD3-9A93-D1ED626F9E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5ECFC1A1-AEEF-4DD3-9A93-D1ED626F9E06}.Release|Any CPU.Build.0 = Release|Any CPU
-		{710C9932-C047-495B-BB03-75C964EC02FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{710C9932-C047-495B-BB03-75C964EC02FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{710C9932-C047-495B-BB03-75C964EC02FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{710C9932-C047-495B-BB03-75C964EC02FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95D6BE11-CD71-4BFC-99B4-F6C4504E075C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95D6BE11-CD71-4BFC-99B4-F6C4504E075C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95D6BE11-CD71-4BFC-99B4-F6C4504E075C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95D6BE11-CD71-4BFC-99B4-F6C4504E075C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
