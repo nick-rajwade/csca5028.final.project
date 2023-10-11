@@ -13,8 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sales-collector", "sales-co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "salesqsubscriber", "salesqsubscriber\salesqsubscriber.csproj", "{5ECFC1A1-AEEF-4DD3-9A93-D1ED626F9E06}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "csca5028.blazor.webapp", "..\csca5028.final\csca5028.final\csca5028.blazor.webapp\csca5028.blazor.webapp.csproj", "{8580B713-E216-4623-B414-501B04CAEA37}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,10 +39,6 @@ Global
 		{5ECFC1A1-AEEF-4DD3-9A93-D1ED626F9E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5ECFC1A1-AEEF-4DD3-9A93-D1ED626F9E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5ECFC1A1-AEEF-4DD3-9A93-D1ED626F9E06}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8580B713-E216-4623-B414-501B04CAEA37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8580B713-E216-4623-B414-501B04CAEA37}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8580B713-E216-4623-B414-501B04CAEA37}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8580B713-E216-4623-B414-501B04CAEA37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
