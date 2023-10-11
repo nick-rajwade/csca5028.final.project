@@ -1,4 +1,4 @@
-using Azure.Identity;
+﻿using Azure.Identity;
 using Prometheus;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using csca5028.final.project;

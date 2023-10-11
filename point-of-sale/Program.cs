@@ -1,4 +1,4 @@
-using Azure.Identity;
+﻿using Azure.Identity;
 using point_of_sale;
 using Prometheus;
 
