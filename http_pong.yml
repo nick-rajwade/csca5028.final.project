@@ -1,0 +1,6 @@
+- labels:
+    module: http_pong
+  targets:
+      - 'https://csca5028api.azure-api.net/ccp/api/ping'
+      - 'https://csca5028api.azure-api.net/pos/api/ping'
+      - 'https://csca5028api.azure-api.net/sca/api/ping'

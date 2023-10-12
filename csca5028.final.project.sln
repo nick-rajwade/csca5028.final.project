@@ -15,6 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "salesqsubscriber", "salesqs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "csca5028BlazorApp2", "csca5028BlazorApp2\csca5028BlazorApp2.csproj", "{95D6BE11-CD71-4BFC-99B4-F6C4504E075C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{49897B38-9A5D-4C36-BCBF-EA4043A14415}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dashboards", "dashboards", "{A4118238-0994-4BEF-BD7B-26DEB3D11E53}"
+	ProjectSection(SolutionItems) = preProject
+		dashboards\readme.txt = dashboards\readme.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +55,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A4118238-0994-4BEF-BD7B-26DEB3D11E53} = {49897B38-9A5D-4C36-BCBF-EA4043A14415}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4324CAE3-EC65-4C1F-A5D1-8537D503003C}

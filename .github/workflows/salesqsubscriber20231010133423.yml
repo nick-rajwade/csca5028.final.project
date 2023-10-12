@@ -1,8 +1,10 @@
-name: Function App salesqsubscriber20231010133423
+name: Function App salesqsubscriber
 on:
   push:
     branches:
     - master
+    paths:
+    - 'salesqsubscriber/**'
 env:
   AZURE_FUNCTIONAPP_NAME: salesqsubscriber20231010133423
   AZURE_FUNCTIONAPP_PACKAGE_PATH: .\published

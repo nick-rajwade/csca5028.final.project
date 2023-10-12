@@ -1,8 +1,10 @@
-name: Build and deploy .NET Core application to Web App csca5028BlazorApp220231011173447
+name: Web App csca5028BlazorApp2
 on:
   push:
     branches:
     - master
+    paths:
+    - 'csca5028BlazorApp2/**'
 env:
   AZURE_WEBAPP_NAME: csca5028BlazorApp220231011173447
   AZURE_WEBAPP_PACKAGE_PATH: ./published

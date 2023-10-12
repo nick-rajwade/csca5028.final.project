@@ -3,6 +3,8 @@ on:
   push:
     branches:
     - master
+    paths:
+    - 'point-of-sale/**'
 env:
   CONTAINER_APP_CONTAINER_NAME: point-of-sale
   CONTAINER_APP_NAME: point-of-sale-app

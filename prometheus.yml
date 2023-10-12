@@ -1,0 +1,67 @@
+# https://prometheus.io/docs/prometheus/latest/configuration/configuration/
+global:
+  # This is higher than RabbitMQ's collect_statistics_interval,
+  # but still close enough to capture metrics that were refreshed within this interval
+  # This value determines the range that we use with rate():
+  # https://www.robustperception.io/what-range-should-i-use-with-rate
+  scrape_interval: 15s # Default is every 1 minute.
+  # scrape_timeout: 10s # Default is 10 seconds.
+  # evaluation_interval: 60s # Default is every 1 minute.
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets:
+      # - 'alertmanager:9093'
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['host.docker.internal:9090']
+  
+  - job_name: 'docker'
+    static_configs:
+      - targets: ['host.docker.internal:9323']
+  
+  - job_name: 'credit-card-processor'
+    metrics_path: /ccp/metrics
+    scheme: https
+    static_configs:
+      - targets: ['csca5028api.azure-api.net']
+    scrape_interval: 5s
+
+  - job_name: 'sales-collector'
+    metrics_path: /sca/metrics  
+    scheme: https
+    static_configs:
+      - targets: ['csca5028api.azure-api.net']
+    scrape_interval: 5s
+
+  - job_name: 'pos'
+    metrics_path: /pos/metrics  
+    scheme: https
+    static_configs:
+      - targets: ['csca5028api.azure-api.net']
+    scrape_interval: 5s
+
+
+  - job_name: 'blackbox'
+    scrape_interval: 5s
+    metrics_path: /probe
+    file_sd_configs:
+        - files:
+          - '/etc/prometheus/blackbox/*.yml'
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: host.docker.internal:9115 # The blackbox exporter's address

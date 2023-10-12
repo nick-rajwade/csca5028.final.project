@@ -3,6 +3,8 @@ on:
   push:
     branches:
     - master
+    paths:
+    - 'sales-collector/**'
 env:
   CONTAINER_APP_CONTAINER_NAME: sales-collector
   CONTAINER_APP_NAME: sales-collector-app

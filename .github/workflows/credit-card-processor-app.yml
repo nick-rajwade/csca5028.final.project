@@ -3,6 +3,8 @@ on:
   push:
     branches:
     - master
+    paths:
+    - 'credit-card-processor/**'
 env:
   CONTAINER_APP_CONTAINER_NAME: credit-card-processor
   CONTAINER_APP_NAME: credit-card-processor-app
