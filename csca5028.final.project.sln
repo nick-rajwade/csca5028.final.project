@@ -22,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dashboards", "dashboards", 
 		dashboards\readme.txt = dashboards\readme.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csca5028.final.project.tests", "csca5028.final.project.tests\csca5028.final.project.tests.csproj", "{529A7266-DA31-448F-AEA9-195B95CD1DA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +54,10 @@ Global
 		{95D6BE11-CD71-4BFC-99B4-F6C4504E075C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95D6BE11-CD71-4BFC-99B4-F6C4504E075C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95D6BE11-CD71-4BFC-99B4-F6C4504E075C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{529A7266-DA31-448F-AEA9-195B95CD1DA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{529A7266-DA31-448F-AEA9-195B95CD1DA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{529A7266-DA31-448F-AEA9-195B95CD1DA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{529A7266-DA31-448F-AEA9-195B95CD1DA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
